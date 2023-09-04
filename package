@@ -1,0 +1,67 @@
+arp.java
+
+package pack;
+public class arp
+{
+interface arpe
+{
+float area(float x,float y);
+float perimeter(float a,float b);
+}
+public class rectangle implements arpe
+{
+public float area(float x,float y)
+{
+float sum=x*y;
+return sum;
+}
+public float perimeter(float a,float b)
+{
+float sum=a+a+b+b;
+return sum;
+}
+}
+public class circle implements arpe
+{
+public float area(float x,float y)
+{
+float sum=x*x*y;
+return sum;
+}
+public float perimeter (float a,float b)
+{
+float sum=2*b*a;
+return sum;
+}
+}
+}
+
+Findarea.java
+
+import java.util.Scanner;
+import pack.arp;
+public class Findarea
+{
+public static void main(String[] args)
+{
+float area,perimeter;
+Scanner in=new Scanner(System.in);
+arp h=new arp();
+System.out.println("enter the length of reac");
+float a=in.nextFloat();
+System.out.println("enter the breadth of reac");
+float b=in.nextFloat();
+arp.rectangle r=h.new rectangle();
+area=r.area(a,b);
+perimeter=r.perimeter(a,b);
+System.out.println("rectangle:area="+area+"perimter=" +perimeter);
+System.out.println("enter the radius of circle");
+float c=in.nextFloat();
+float pie=3.14f;
+arp.circle cir=h.new circle();
+area=cir.area(c,pie);
+perimeter=cir.perimeter(c,pie);
+System.out.println("circle area="+area+"perimeter="+perimeter);
+}
+}
+
